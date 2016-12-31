@@ -25,7 +25,7 @@ public class Earth {
         System.out.println("Noahs ARK" + a.toString());
 
         Earth earth = new Earth();
-        earth.winterIsComing(a);
+       // earth.winterIsComing(a);
 
         HibernateUtil();
     }
