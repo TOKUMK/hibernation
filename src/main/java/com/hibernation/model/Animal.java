@@ -1,19 +1,24 @@
 package com.hibernation.model;
 
+import org.hibernate.annotations.*;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
  * Created by jonathan on 26/12/16.
  */
 @Entity
-@Table(name="Animal")
+@DynamicUpdate
+@Table(name="animal")
 public class Animal implements Serializable {
 
     @Id
     @Column
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int     id;
+    private long     id;
     private String  name;
     private String  type;
     private String  diet;
@@ -21,18 +26,18 @@ public class Animal implements Serializable {
     public Animal() {
     }
 
-    public Animal(int id, String name, String type, String diet) {
+    public Animal(long id, String name, String type, String diet) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.diet = diet;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

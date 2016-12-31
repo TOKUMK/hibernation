@@ -11,10 +11,16 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">root</property>
 
+        <!--<mapping package="com.hibernation.model" />-->
+        <!--<property name="mapping class">com.hibernation.model.Animal</property>-->
+
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <!-- Specify session context -->
         <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+
+        <mapping resource="Animal.hbm.xml"/>
+
 
     </session-factory>
 
